@@ -89,13 +89,19 @@ add_action( 'init', 'adpr_init_plugin', 1 );
 
 /**
  * Load plugin text domain for translations.
+ * Note: Since WordPress 4.6+, WordPress.org hosted plugins automatically load translations.
+ * This function is kept for backwards compatibility with older WordPress versions.
  */
 function adpr_load_textdomain() {
-	load_plugin_textdomain(
-		'auto-daily-post-refresher',
-		false,
-		dirname( ADPR_PLUGIN_BASENAME ) . '/languages'
-	);
+	// WordPress.org automatically loads translations for hosted plugins since WP 4.6+
+	// Keeping this for backwards compatibility only
+	if ( version_compare( get_bloginfo( 'version' ), '4.6', '<' ) ) {
+		load_plugin_textdomain(
+			'auto-daily-post-refresher',
+			false,
+			dirname( ADPR_PLUGIN_BASENAME ) . '/languages'
+		);
+	}
 }
 add_action( 'plugins_loaded', 'adpr_load_textdomain' );
 

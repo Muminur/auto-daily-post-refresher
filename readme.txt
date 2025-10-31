@@ -1,11 +1,11 @@
 === Auto Daily Post Refresher ===
-Contributors: yourusername
-Donate link: https://example.com/donate
+Contributors: muminur
+Donate link: https://alternativechoice.org
 Tags: post date, automation, seo, content refresh, scheduled updates, cron, bulk edit, post management, date updater, freshness
 Requires at least: 5.0
-Tested up to: 6.4
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -610,7 +610,7 @@ Works with ACF, CPT UI, Pods, Toolset, and all custom post type plugins.
 
 == Changelog ==
 
-= 1.0.0 - 2025-10-30 =
+= 1.0.8 - 2025-10-31 =
 
 **Initial Release**
 
@@ -641,7 +641,7 @@ Features:
 * Comprehensive developer hooks and filters
 
 Technical:
-* Minimum WordPress 5.0, tested up to 6.4
+* Minimum WordPress 5.0, tested up to 6.8
 * Minimum PHP 7.4, tested up to 8.3
 * MySQL 5.7+ or MariaDB 10.2+ compatible
 * Zero conflicts with original Bulk Datetime Change plugin
@@ -660,7 +660,7 @@ Developer:
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.8 =
 Initial release. Install and enjoy automated post date refreshing! Set it once and forget it - your posts will stay fresh automatically.
 
 == Additional Information ==
