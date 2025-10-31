@@ -1,0 +1,794 @@
+/**
+ * Auto Daily Post Refresher - Admin Styles
+ *
+ * @package Auto Daily Post Refresher
+ */
+
+/* Info Box */
+.adpr-info-box {
+	background: #e7f5fe;
+	border-left: 4px solid #0073aa;
+	padding: 15px;
+	margin: 20px 0;
+}
+
+.adpr-info-box p {
+	margin: 0;
+}
+
+/* Status Badges */
+.adpr-status-badge {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.adpr-status-badge.adpr-status-enabled {
+	background: #d4edda;
+	color: #155724;
+}
+
+.adpr-status-badge.adpr-status-disabled {
+	background: #f8d7da;
+	color: #721c24;
+}
+
+.adpr-status-badge.adpr-status-publish {
+	background: #d4edda;
+	color: #155724;
+}
+
+/* Toggle Switch */
+.adpr-toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+}
+
+.adpr-toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.adpr-toggle-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.3s;
+	border-radius: 24px;
+}
+
+.adpr-toggle-slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: 0.3s;
+	border-radius: 50%;
+}
+
+.adpr-toggle-input:checked + .adpr-toggle-slider {
+	background-color: #2271b1;
+}
+
+.adpr-toggle-input:checked + .adpr-toggle-slider:before {
+	transform: translateX(26px);
+}
+
+.adpr-toggle-input:focus + .adpr-toggle-slider {
+	box-shadow: 0 0 1px #2271b1;
+}
+
+.adpr-toggle-input:disabled + .adpr-toggle-slider {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Logs Toolbar */
+.adpr-logs-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+	padding: 15px;
+	background: #f0f0f1;
+	border-radius: 4px;
+}
+
+.adpr-search-form {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.adpr-search-form input[type="text"] {
+	min-width: 250px;
+}
+
+.adpr-logs-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.button-danger {
+	background: #dc3232;
+	border-color: #dc3232;
+	color: #fff;
+}
+
+.button-danger:hover {
+	background: #c62828;
+	border-color: #c62828;
+	color: #fff;
+}
+
+/* Manual Trigger Section */
+.adpr-manual-trigger-section {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ccd0d4;
+	border-radius: 4px;
+	margin: 20px 0;
+}
+
+.adpr-trigger-options {
+	margin: 15px 0;
+}
+
+.adpr-trigger-options label {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 500;
+}
+
+/* Progress Container */
+.adpr-progress-container {
+	margin: 20px 0;
+	padding: 20px;
+	background: #f8f9fa;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.adpr-progress-bar {
+	width: 100%;
+	height: 30px;
+	background: #e0e0e0;
+	border-radius: 15px;
+	overflow: hidden;
+	margin: 15px 0;
+}
+
+.adpr-progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, #2271b1 0%, #0d5a96 100%);
+	transition: width 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: 600;
+}
+
+.adpr-progress-text {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+/* Result Container */
+.adpr-result-container {
+	margin: 20px 0;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: 4px;
+}
+
+.adpr-result-container h3 {
+	margin-top: 0;
+}
+
+.adpr-result-success {
+	padding: 15px;
+	background: #d4edda;
+	border: 1px solid #c3e6cb;
+	color: #155724;
+	border-radius: 4px;
+	margin: 10px 0;
+}
+
+.adpr-result-error {
+	padding: 15px;
+	background: #f8d7da;
+	border: 1px solid #f5c6cb;
+	color: #721c24;
+	border-radius: 4px;
+	margin: 10px 0;
+}
+
+.adpr-result-info {
+	padding: 15px;
+	background: #e7f5fe;
+	border: 1px solid #bee5eb;
+	color: #0c5460;
+	border-radius: 4px;
+	margin: 10px 0;
+}
+
+/* Status Section */
+.adpr-status-section {
+	margin: 30px 0;
+}
+
+.adpr-status-section .form-table th {
+	width: 220px;
+	font-weight: 600;
+}
+
+/* List Table Enhancements */
+.wp-list-table .column-auto_update {
+	text-align: center;
+}
+
+.wp-list-table .column-update_count,
+.wp-list-table .column-status {
+	text-align: center;
+}
+
+.wp-list-table .column-last_updated {
+	white-space: nowrap;
+}
+
+/* Filter Actions */
+.tablenav .alignleft.actions {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.tablenav .alignleft.actions select {
+	max-width: 180px;
+}
+
+/* Loading Spinner */
+.adpr-loading {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 3px solid #f3f3f3;
+	border-top: 3px solid #2271b1;
+	border-radius: 50%;
+	animation: adpr-spin 1s linear infinite;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+@keyframes adpr-spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Notice Styles */
+.notice.adpr-notice {
+	padding: 12px;
+	margin: 15px 0;
+}
+
+.notice.adpr-notice p {
+	margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+	.adpr-logs-toolbar {
+		flex-direction: column;
+		gap: 15px;
+		align-items: stretch;
+	}
+
+	.adpr-search-form {
+		flex-direction: column;
+	}
+
+	.adpr-search-form input[type="text"] {
+		width: 100%;
+	}
+
+	.adpr-logs-actions {
+		flex-direction: column;
+	}
+
+	.tablenav .alignleft.actions {
+		flex-direction: column;
+	}
+
+	.tablenav .alignleft.actions select {
+		max-width: 100%;
+	}
+}
+
+/* Accessibility Enhancements */
+.adpr-toggle-switch:focus-within {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+button:focus,
+.button:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+/* Animation for status changes */
+.adpr-updating {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.adpr-updated {
+	animation: adpr-highlight 1s ease;
+}
+
+@keyframes adpr-highlight {
+	0% { background-color: #d4edda; }
+	100% { background-color: transparent; }
+}
+
+/* Tooltip */
+.adpr-tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: help;
+}
+
+.adpr-tooltip .adpr-tooltiptext {
+	visibility: hidden;
+	width: 220px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -110px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	font-size: 12px;
+}
+
+.adpr-tooltip:hover .adpr-tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Empty State */
+.adpr-empty-state {
+	text-align: center;
+	padding: 60px 20px;
+	color: #646970;
+}
+
+.adpr-empty-state-icon {
+	font-size: 48px;
+	margin-bottom: 20px;
+	opacity: 0.3;
+}
+
+.adpr-empty-state h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.adpr-empty-state p {
+	font-size: 14px;
+	color: #787c82;
+}
+
+/* Settings Form Enhancements */
+.form-table input[type="time"] {
+	padding: 6px 10px;
+	font-size: 14px;
+}
+
+.form-table .description {
+	font-size: 13px;
+	color: #646970;
+	margin-top: 5px;
+}
+
+/* Button Group */
+.adpr-button-group {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+/* Card Style */
+.adpr-card {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: 4px;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.adpr-card h2 {
+	margin-top: 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+/* Stats Display */
+.adpr-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	margin: 20px 0;
+}
+
+.adpr-stat-box {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: 4px;
+	padding: 20px;
+	text-align: center;
+}
+
+.adpr-stat-value {
+	font-size: 32px;
+	font-weight: 700;
+	color: #2271b1;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.adpr-stat-label {
+	font-size: 14px;
+	color: #646970;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+/* Success/Error Messages */
+.adpr-message {
+	padding: 12px 15px;
+	margin: 15px 0;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.adpr-message-success {
+	background: #d4edda;
+	border: 1px solid #c3e6cb;
+	color: #155724;
+}
+
+.adpr-message-error {
+	background: #f8d7da;
+	border: 1px solid #f5c6cb;
+	color: #721c24;
+}
+
+.adpr-message-warning {
+	background: #fff3cd;
+	border: 1px solid #ffeeba;
+	color: #856404;
+}
+
+.adpr-message-info {
+	background: #e7f5fe;
+	border: 1px solid #bee5eb;
+	color: #0c5460;
+}
+
+/* Compact Mode for Tables */
+.adpr-compact .wp-list-table {
+	font-size: 13px;
+}
+
+.adpr-compact .wp-list-table th,
+.adpr-compact .wp-list-table td {
+	padding: 8px;
+}
+
+/* Activity Summary */
+.adpr-activity-summary {
+	margin: 20px 0;
+}
+
+.adpr-activity-summary .adpr-stats {
+	margin-bottom: 0;
+}
+
+/* Dashboard Widget */
+.adpr-dashboard-widget .adpr-widget-status {
+	margin: 15px 0;
+	padding: 15px;
+	background: #f8f9fa;
+	border-radius: 4px;
+}
+
+.adpr-dashboard-widget .adpr-widget-status p {
+	margin: 8px 0;
+}
+
+.adpr-dashboard-widget .adpr-widget-actions {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin-top: 15px;
+}
+
+/* Help Page */
+.adpr-help-page .adpr-card {
+	margin-bottom: 30px;
+}
+
+.adpr-help-page h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+.adpr-help-page ul,
+.adpr-help-page ol {
+	margin: 10px 0 10px 25px;
+}
+
+.adpr-help-page li {
+	margin: 5px 0;
+}
+
+.adpr-help-page code {
+	background: #f0f0f1;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 13px;
+}
+
+.adpr-help-page table {
+	margin-top: 15px;
+}
+
+.adpr-help-page table th,
+.adpr-help-page table td {
+	padding: 10px;
+}
+
+/* Enhanced Tooltips */
+.adpr-has-tooltip {
+	position: relative;
+	cursor: help;
+	border-bottom: 1px dotted #646970;
+}
+
+.adpr-has-tooltip:hover::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 125%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #2c3338;
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-size: 12px;
+	white-space: nowrap;
+	z-index: 1000;
+	pointer-events: none;
+}
+
+.adpr-has-tooltip:hover::before {
+	content: "";
+	position: absolute;
+	bottom: 115%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 5px solid transparent;
+	border-top-color: #2c3338;
+	z-index: 1000;
+	pointer-events: none;
+}
+
+/* ARIA Live Region */
+.adpr-aria-live {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* Undo Notice */
+.adpr-undo-notice {
+	border-left-color: #72aee6;
+}
+
+.adpr-undo-notice #adpr-undo-btn {
+	vertical-align: middle;
+}
+
+/* Keyboard Shortcuts Modal */
+.adpr-shortcuts-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	padding: 30px;
+	border-radius: 4px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+	z-index: 100000;
+	max-width: 600px;
+	width: 90%;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.adpr-shortcuts-modal.active {
+	display: block;
+}
+
+.adpr-shortcuts-modal h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.adpr-shortcuts-modal table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.adpr-shortcuts-modal th,
+.adpr-shortcuts-modal td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.adpr-shortcuts-modal kbd {
+	display: inline-block;
+	padding: 3px 8px;
+	background: #f0f0f1;
+	border: 1px solid #c3c4c7;
+	border-radius: 3px;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 13px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.adpr-shortcuts-modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 99999;
+}
+
+.adpr-shortcuts-modal-overlay.active {
+	display: block;
+}
+
+.adpr-shortcuts-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #646970;
+	background: none;
+	border: none;
+	padding: 5px 10px;
+}
+
+.adpr-shortcuts-close:hover {
+	color: #000;
+}
+
+/* Email Notification Settings */
+.adpr-email-settings {
+	background: #f8f9fa;
+	padding: 15px;
+	border-left: 4px solid #72aee6;
+	margin: 20px 0;
+}
+
+.adpr-email-settings label {
+	display: block;
+	margin: 10px 0;
+}
+
+.adpr-email-settings input[type="email"] {
+	width: 100%;
+	max-width: 400px;
+}
+
+/* Focus Styles for Accessibility */
+button:focus-visible,
+.button:focus-visible,
+a:focus-visible {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2271b1;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* Skip Link */
+.adpr-skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #2271b1;
+	color: #fff;
+	padding: 8px 15px;
+	text-decoration: none;
+	z-index: 100000;
+}
+
+.adpr-skip-link:focus {
+	top: 0;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+	.adpr-status-badge,
+	.adpr-toggle-slider {
+		border: 2px solid currentColor;
+	}
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.adpr-dashboard-widget .adpr-widget-actions,
+	.adpr-logs-toolbar,
+	.adpr-toggle-switch,
+	.adpr-shortcuts-modal,
+	.button {
+		display: none;
+	}
+
+	.adpr-card {
+		page-break-inside: avoid;
+	}
+}

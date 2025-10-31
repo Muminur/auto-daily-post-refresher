@@ -1,0 +1,434 @@
+# Copyright (C) 2025 Auto Daily Post Refresher
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Daily Post Refresher 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/auto-daily-post-refresher\n"
+"POT-Creation-Date: 2025-10-30 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: WordPress\n"
+"X-Domain: auto-daily-post-refresher\n"
+
+#: auto-daily-post-refresher.php:50
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: lib/class-autodailypostrefresher.php:35
+msgid "Once Daily (ADPR)"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:45
+msgid "Auto Post Refresher"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:46
+msgid "Post Selector"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:47
+#: lib/class-autodailypostrefresheradmin.php:350
+msgid "Settings"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:48
+msgid "Update Logs"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:49
+msgid "Manual Trigger"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:50
+msgid "Help & Support"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:125
+msgid "Enable Auto-Update"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:126
+msgid "Disable Auto-Update"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:145
+msgid "%d post(s) enabled for auto-update."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:147
+msgid "%d post(s) disabled from auto-update."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:152
+msgid "Undo"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:175
+msgid "Posts Marked for Auto-Update:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:176
+msgid "Total Updates Performed:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:177
+msgid "Log Entries:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:205
+msgid "Settings saved successfully."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:230
+msgid "Basic Settings"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:240
+msgid "Enable Automatic Updates"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:250
+msgid "Update Time"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:251
+msgid "Time of day to run automatic updates (24-hour format, e.g., 03:00)"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:260
+msgid "Post Types to Update"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:285
+msgid "Update Options"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:290
+msgid "Update Publication Date"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:291
+msgid "Update the post_date field"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:295
+msgid "Update Modified Date"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:296
+msgid "Update the post_modified field"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:305
+msgid "Performance"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:310
+msgid "Batch Size"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:311
+msgid "Number of posts to update per run (1-1000)"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:320
+msgid "Email Notifications"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:325
+msgid "Enable Email Notifications"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:326
+msgid "Send email after each automatic update"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:330
+msgid "Notification Email"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:331
+msgid "Email address for notifications"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:340
+msgid "System Status"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:345
+msgid "Plugin Status:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:346
+msgid "Enabled"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:346
+msgid "Disabled"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:347
+msgid "Cron Status:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:348
+msgid "Scheduled"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:348
+msgid "Not Scheduled"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:349
+msgid "Next Run:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:350
+msgid "Last Run:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:350
+msgid "Never"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:351
+msgid "Posts Marked:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:352
+msgid "Total Updates:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:355
+msgid "Save Settings"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:400
+msgid "All Types"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:410
+msgid "All Categories"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:420
+msgid "All Authors"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:425
+msgid "All Posts"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:426
+msgid "Auto-Update Enabled"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:427
+msgid "Auto-Update Disabled"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:440
+msgid "Select All"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:441
+msgid "Select None"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:442
+msgid "Select Filtered"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:500
+msgid "Auto Daily Post Update: %d posts updated"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:510
+msgid "Export to CSV"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:515
+msgid "Clear Logs"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:520
+msgid "Are you sure you want to clear all logs? This cannot be undone."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:525
+msgid "No logs found."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:555
+msgid "Logs cleared successfully."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:600
+msgid "Current Status"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:605
+msgid "Last Automatic Run:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:610
+msgid "Next Scheduled Run:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:620
+msgid "Dry Run Mode"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:625
+msgid "Enable Dry Run (preview only, no actual updates)"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:630
+msgid "Run Update Now"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:650
+msgid "Update Complete"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:655
+msgid "Posts Updated:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:660
+msgid "Execution Time:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:665
+msgid "View Logs"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:700
+msgid "Overview"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:705
+msgid "Getting Started"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:710
+msgid "Troubleshooting"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:750
+msgid "Auto Post Refresher Status"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:760
+msgid "Last Run:"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:765
+msgid "Configure Settings"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:770
+msgid "View All Logs"
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:800
+msgid "Post auto-update status toggled."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:850
+msgid "Changes undone successfully."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:900
+msgid "%d posts would be updated (Dry Run)."
+msgstr ""
+
+#: lib/class-autodailypostrefresheradmin.php:905
+msgid "%d posts updated successfully."
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:50
+msgid "ID"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:51
+msgid "Title"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:52
+msgid "Type"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:53
+msgid "Author"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:54
+msgid "Categories"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:55
+msgid "Date"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:56
+msgid "Status"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:57
+msgid "Auto-Update"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:58
+msgid "Last Auto-Updated"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:59
+msgid "Update Count"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:150
+msgid "Edit"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:155
+msgid "View"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:200
+msgid "N/A"
+msgstr ""
+
+#: lib/class-adpr-posts-list-table.php:250
+msgid "No posts found."
+msgstr ""
+
+#: uninstall.php:25
+msgid "Auto Daily Post Refresher: All plugin data has been removed."
+msgstr ""
+
+#. Plugin Name of the plugin
+msgid "Auto Daily Post Refresher"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://example.com/auto-daily-post-refresher"
+msgstr ""
+
+#. Description of the plugin
+msgid "Automatically update post publication dates daily to keep your content fresh and improve SEO rankings."
+msgstr ""
+
+#. Author of the plugin
+msgid "Your Name"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://example.com"
+msgstr ""
