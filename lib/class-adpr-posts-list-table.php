@@ -41,15 +41,15 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'            => '<input type="checkbox" />',
-			'title'         => __( 'Title', 'auto-daily-post-refresher' ),
-			'post_type'     => __( 'Type', 'auto-daily-post-refresher' ),
-			'author'        => __( 'Author', 'auto-daily-post-refresher' ),
-			'categories'    => __( 'Categories', 'auto-daily-post-refresher' ),
-			'date'          => __( 'Date', 'auto-daily-post-refresher' ),
-			'status'        => __( 'Status', 'auto-daily-post-refresher' ),
-			'auto_update'   => __( 'Auto-Update', 'auto-daily-post-refresher' ),
-			'update_count'  => __( 'Updates', 'auto-daily-post-refresher' ),
-			'last_updated'  => __( 'Last Auto-Update', 'auto-daily-post-refresher' ),
+			'title'         => __( 'Title', 'bulk-daily-datetime' ),
+			'post_type'     => __( 'Type', 'bulk-daily-datetime' ),
+			'author'        => __( 'Author', 'bulk-daily-datetime' ),
+			'categories'    => __( 'Categories', 'bulk-daily-datetime' ),
+			'date'          => __( 'Date', 'bulk-daily-datetime' ),
+			'status'        => __( 'Status', 'bulk-daily-datetime' ),
+			'auto_update'   => __( 'Auto-Update', 'bulk-daily-datetime' ),
+			'update_count'  => __( 'Updates', 'bulk-daily-datetime' ),
+			'last_updated'  => __( 'Last Auto-Update', 'bulk-daily-datetime' ),
 		);
 	}
 
@@ -75,8 +75,8 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 	 */
 	protected function get_bulk_actions() {
 		return array(
-			'enable'  => __( 'Enable Auto-Update', 'auto-daily-post-refresher' ),
-			'disable' => __( 'Disable Auto-Update', 'auto-daily-post-refresher' ),
+			'enable'  => __( 'Enable Auto-Update', 'bulk-daily-datetime' ),
+			'disable' => __( 'Disable Auto-Update', 'bulk-daily-datetime' ),
 		);
 	}
 
@@ -101,8 +101,8 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 		$view_link = get_permalink( $item->ID );
 
 		$actions = array(
-			'edit' => sprintf( '<a href="%s">%s</a>', esc_url( $edit_link ), __( 'Edit', 'auto-daily-post-refresher' ) ),
-			'view' => sprintf( '<a href="%s" target="_blank">%s</a>', esc_url( $view_link ), __( 'View', 'auto-daily-post-refresher' ) ),
+			'edit' => sprintf( '<a href="%s">%s</a>', esc_url( $edit_link ), __( 'Edit', 'bulk-daily-datetime' ) ),
+			'view' => sprintf( '<a href="%s" target="_blank">%s</a>', esc_url( $view_link ), __( 'View', 'bulk-daily-datetime' ) ),
 		);
 
 		return sprintf(
@@ -132,7 +132,7 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 	 */
 	public function column_author( $item ) {
 		$author = get_userdata( $item->post_author );
-		return $author ? esc_html( $author->display_name ) : __( 'Unknown', 'auto-daily-post-refresher' );
+		return $author ? esc_html( $author->display_name ) : __( 'Unknown', 'bulk-daily-datetime' );
 	}
 
 	/**
@@ -255,7 +255,7 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 		<div class="alignleft actions">
 			<!-- Post Type Filter -->
 			<select name="post_type" id="adpr-filter-type">
-				<option value=""><?php esc_html_e( 'All Post Types', 'auto-daily-post-refresher' ); ?></option>
+				<option value=""><?php esc_html_e( 'All Post Types', 'bulk-daily-datetime' ); ?></option>
 				<?php foreach ( $allowed_types as $type ) : ?>
 					<?php $type_obj = get_post_type_object( $type ); ?>
 					<?php if ( $type_obj ) : ?>
@@ -272,7 +272,7 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 			if ( ! empty( $categories ) ) :
 				?>
 				<select name="category" id="adpr-filter-category">
-					<option value="0"><?php esc_html_e( 'All Categories', 'auto-daily-post-refresher' ); ?></option>
+					<option value="0"><?php esc_html_e( 'All Categories', 'bulk-daily-datetime' ); ?></option>
 					<?php foreach ( $categories as $category ) : ?>
 						<option value="<?php echo esc_attr( $category->term_id ); ?>" <?php selected( $selected_cat, $category->term_id ); ?>>
 							<?php echo esc_html( $category->name ); ?>
@@ -287,7 +287,7 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 			if ( ! empty( $authors ) ) :
 				?>
 				<select name="author" id="adpr-filter-author">
-					<option value="0"><?php esc_html_e( 'All Authors', 'auto-daily-post-refresher' ); ?></option>
+					<option value="0"><?php esc_html_e( 'All Authors', 'bulk-daily-datetime' ); ?></option>
 					<?php foreach ( $authors as $author ) : ?>
 						<option value="<?php echo esc_attr( $author->ID ); ?>" <?php selected( $selected_author, $author->ID ); ?>>
 							<?php echo esc_html( $author->display_name ); ?>
@@ -298,27 +298,27 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 
 			<!-- Auto-Update Status Filter -->
 			<select name="auto_status" id="adpr-filter-status">
-				<option value=""><?php esc_html_e( 'All Statuses', 'auto-daily-post-refresher' ); ?></option>
+				<option value=""><?php esc_html_e( 'All Statuses', 'bulk-daily-datetime' ); ?></option>
 				<option value="enabled" <?php selected( $selected_status, 'enabled' ); ?>>
-					<?php esc_html_e( 'Auto-Update Enabled', 'auto-daily-post-refresher' ); ?>
+					<?php esc_html_e( 'Auto-Update Enabled', 'bulk-daily-datetime' ); ?>
 				</option>
 				<option value="disabled" <?php selected( $selected_status, 'disabled' ); ?>>
-					<?php esc_html_e( 'Auto-Update Disabled', 'auto-daily-post-refresher' ); ?>
+					<?php esc_html_e( 'Auto-Update Disabled', 'bulk-daily-datetime' ); ?>
 				</option>
 			</select>
 
-			<button type="submit" class="button"><?php esc_html_e( 'Filter', 'auto-daily-post-refresher' ); ?></button>
+			<button type="submit" class="button"><?php esc_html_e( 'Filter', 'bulk-daily-datetime' ); ?></button>
 		</div>
 
 		<div class="alignleft actions">
 			<button type="button" id="adpr-select-all" class="button">
-				<?php esc_html_e( 'Select All', 'auto-daily-post-refresher' ); ?>
+				<?php esc_html_e( 'Select All', 'bulk-daily-datetime' ); ?>
 			</button>
 			<button type="button" id="adpr-select-none" class="button">
-				<?php esc_html_e( 'Select None', 'auto-daily-post-refresher' ); ?>
+				<?php esc_html_e( 'Select None', 'bulk-daily-datetime' ); ?>
 			</button>
 			<button type="button" id="adpr-select-filtered" class="button">
-				<?php esc_html_e( 'Select Filtered', 'auto-daily-post-refresher' ); ?>
+				<?php esc_html_e( 'Select Filtered', 'bulk-daily-datetime' ); ?>
 			</button>
 		</div>
 		<?php
@@ -415,7 +415,7 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 	 * Display when no items found.
 	 */
 	public function no_items() {
-		esc_html_e( 'No posts found.', 'auto-daily-post-refresher' );
+		esc_html_e( 'No posts found.', 'bulk-daily-datetime' );
 	}
 
 	/**
@@ -435,7 +435,7 @@ class ADPR_Posts_List_Table extends WP_List_Table {
 		check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( __( 'You do not have sufficient permissions.', 'auto-daily-post-refresher' ) );
+			wp_die( __( 'You do not have sufficient permissions.', 'bulk-daily-datetime' ) );
 		}
 
 		$post_ids = array_map( 'absint', $_POST['post_ids'] );

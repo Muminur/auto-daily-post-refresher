@@ -35,7 +35,7 @@ class AutoDailyPostRefresher {
 	public function add_cron_schedule( $schedules ) {
 		$schedules['adpr_daily'] = array(
 			'interval' => DAY_IN_SECONDS,
-			'display'  => __( 'Once Daily (ADPR)', 'auto-daily-post-refresher' ),
+			'display'  => __( 'Once Daily (ADPR)', 'bulk-daily-datetime' ),
 		);
 		return $schedules;
 	}
@@ -100,7 +100,7 @@ class AutoDailyPostRefresher {
 			return array(
 				'success' => false,
 				'count'   => 0,
-				'message' => __( 'Auto-updates are disabled in settings. Please enable them on the Settings page.', 'auto-daily-post-refresher' ),
+				'message' => __( 'Auto-updates are disabled in settings. Please enable them on the Settings page.', 'bulk-daily-datetime' ),
 			);
 		}
 
@@ -112,7 +112,7 @@ class AutoDailyPostRefresher {
 			return array(
 				'success' => false,
 				'count'   => 0,
-				'message' => __( 'Another update is already running. Please wait and try again.', 'auto-daily-post-refresher' ),
+				'message' => __( 'Another update is already running. Please wait and try again.', 'bulk-daily-datetime' ),
 			);
 		}
 
@@ -135,7 +135,7 @@ class AutoDailyPostRefresher {
 			return array(
 				'success' => false,
 				'count'   => 0,
-				'message' => __( 'No posts are marked for auto-update. Please mark posts on the Post Selector page.', 'auto-daily-post-refresher' ),
+				'message' => __( 'No posts are marked for auto-update. Please mark posts on the Post Selector page.', 'bulk-daily-datetime' ),
 			);
 		}
 
@@ -160,7 +160,7 @@ class AutoDailyPostRefresher {
 			'count'   => $count,
 			'message' => sprintf(
 				/* translators: %d: number of posts updated */
-				_n( '%d post updated successfully.', '%d posts updated successfully.', $count, 'auto-daily-post-refresher' ),
+				_n( '%d post updated successfully.', '%d posts updated successfully.', $count, 'bulk-daily-datetime' ),
 				$count
 			),
 		);

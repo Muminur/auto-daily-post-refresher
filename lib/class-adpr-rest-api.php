@@ -302,7 +302,7 @@ class ADPR_REST_API {
 		if ( ! $post ) {
 			return new WP_Error(
 				'post_not_found',
-				__( 'Post not found.', 'auto-daily-post-refresher' ),
+				__( 'Post not found.', 'bulk-daily-datetime' ),
 				array( 'status' => 404 )
 			);
 		}
@@ -324,7 +324,7 @@ class ADPR_REST_API {
 		if ( ! $post ) {
 			return new WP_Error(
 				'post_not_found',
-				__( 'Post not found.', 'auto-daily-post-refresher' ),
+				__( 'Post not found.', 'bulk-daily-datetime' ),
 				array( 'status' => 404 )
 			);
 		}
@@ -332,7 +332,7 @@ class ADPR_REST_API {
 		if ( $post->post_status !== 'publish' ) {
 			return new WP_Error(
 				'post_not_published',
-				__( 'Only published posts can be enabled for auto-update.', 'auto-daily-post-refresher' ),
+				__( 'Only published posts can be enabled for auto-update.', 'bulk-daily-datetime' ),
 				array( 'status' => 400 )
 			);
 		}
@@ -341,7 +341,7 @@ class ADPR_REST_API {
 
 		return new WP_REST_Response(
 			array(
-				'message' => __( 'Auto-update enabled for post.', 'auto-daily-post-refresher' ),
+				'message' => __( 'Auto-update enabled for post.', 'bulk-daily-datetime' ),
 				'post'    => $this->prepare_post_data( $post ),
 			),
 			200
@@ -362,7 +362,7 @@ class ADPR_REST_API {
 		if ( ! $post ) {
 			return new WP_Error(
 				'post_not_found',
-				__( 'Post not found.', 'auto-daily-post-refresher' ),
+				__( 'Post not found.', 'bulk-daily-datetime' ),
 				array( 'status' => 404 )
 			);
 		}
@@ -371,7 +371,7 @@ class ADPR_REST_API {
 
 		return new WP_REST_Response(
 			array(
-				'message' => __( 'Auto-update disabled for post.', 'auto-daily-post-refresher' ),
+				'message' => __( 'Auto-update disabled for post.', 'bulk-daily-datetime' ),
 				'post'    => $this->prepare_post_data( $post ),
 			),
 			200
@@ -438,7 +438,7 @@ class ADPR_REST_API {
 
 			return new WP_REST_Response(
 				array(
-					'message'  => __( 'Settings updated successfully.', 'auto-daily-post-refresher' ),
+					'message'  => __( 'Settings updated successfully.', 'bulk-daily-datetime' ),
 					'settings' => $settings,
 				),
 				200
@@ -447,7 +447,7 @@ class ADPR_REST_API {
 
 		return new WP_REST_Response(
 			array(
-				'message'  => __( 'No settings were updated.', 'auto-daily-post-refresher' ),
+				'message'  => __( 'No settings were updated.', 'bulk-daily-datetime' ),
 				'settings' => $settings,
 			),
 			200
@@ -505,7 +505,7 @@ class ADPR_REST_API {
 			array(
 				'message' => sprintf(
 					/* translators: %d: Number of log entries cleared */
-					__( 'Cleared %d log entries.', 'auto-daily-post-refresher' ),
+					__( 'Cleared %d log entries.', 'bulk-daily-datetime' ),
 					$count
 				),
 				'cleared' => $count,
@@ -531,7 +531,7 @@ class ADPR_REST_API {
 		if ( empty( $posts ) ) {
 			return new WP_REST_Response(
 				array(
-					'message'     => __( 'No posts found for updating.', 'auto-daily-post-refresher' ),
+					'message'     => __( 'No posts found for updating.', 'bulk-daily-datetime' ),
 					'posts_found' => 0,
 					'updated'     => 0,
 					'failed'      => 0,
@@ -555,7 +555,7 @@ class ADPR_REST_API {
 
 			return new WP_REST_Response(
 				array(
-					'message'     => __( 'Dry run completed.', 'auto-daily-post-refresher' ),
+					'message'     => __( 'Dry run completed.', 'bulk-daily-datetime' ),
 					'posts_found' => count( $posts ),
 					'dry_run'     => true,
 					'posts'       => $dry_run_data,
@@ -589,7 +589,7 @@ class ADPR_REST_API {
 			array(
 				'message'     => sprintf(
 					/* translators: 1: Number of successful updates, 2: Number of failed updates */
-					__( 'Manual update completed. Success: %1$d, Failed: %2$d', 'auto-daily-post-refresher' ),
+					__( 'Manual update completed. Success: %1$d, Failed: %2$d', 'bulk-daily-datetime' ),
 					$success,
 					$failed
 				),

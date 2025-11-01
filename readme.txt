@@ -1,11 +1,11 @@
-=== Auto Daily Post Refresher ===
+=== Bulk Daily DateTime ===
 Contributors: muminur
 Donate link: https://alternativechoice.org
 Tags: post date, automation, seo, content refresh, scheduled updates, cron, bulk edit, post management, date updater, freshness
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.8
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Automatically update post publication dates daily to keep your content fresh and
 
 == Description ==
 
-**Auto Daily Post Refresher** is a powerful WordPress plugin that automatically updates post publication dates on a daily basis, helping your content appear fresh to search engines and visitors. Perfect for content-heavy sites that want to maintain the appearance of regularly updated content without manual intervention.
+**Bulk Daily DateTime** is a powerful WordPress plugin that automatically updates post publication dates on a daily basis, helping your content appear fresh to search engines and visitors. Perfect for content-heavy sites that want to maintain the appearance of regularly updated content without manual intervention.
 
 = Key Features =
 
@@ -610,6 +610,17 @@ Works with ACF, CPT UI, Pods, Toolset, and all custom post type plugins.
 
 == Changelog ==
 
+= 2.0.0 - 2025-11-01 =
+
+**Compliance Update**
+
+* Fixed text domain to match plugin slug (bulk-daily-datetime)
+* Removed deprecated load_plugin_textdomain() function (not needed since WordPress 4.6)
+* Updated all translation strings to use correct text domain
+* Renamed language POT file to match plugin text domain
+* Updated version numbering to 2.0.0 for significant changes
+* Full WordPress.org plugin guidelines compliance
+
 = 1.0.8 - 2025-10-31 =
 
 **Initial Release**
@@ -659,6 +670,9 @@ Developer:
 * Security audit report in SECURITY.md
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+Important compliance update: Fixed text domain and removed deprecated functions for full WordPress.org compatibility. Update recommended for all users.
 
 = 1.0.8 =
 Initial release. Install and enjoy automated post date refreshing! Set it once and forget it - your posts will stay fresh automatically.
